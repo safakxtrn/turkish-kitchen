@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*************** Header ***************/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2e4374;
+}
+
+header h1 {
+  margin-left: 50px;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 50px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  margin-right: 50px;
+}
+
+header li {
+  margin: 0 12px;
+  display: flex;
+  align-items: center;
+}
+
+header a {
+  color: rgba(6, 67, 116, 0.85);
+  text-decoration: none;
+  background-color: #7c81ad;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.selected {
+  background-color: #e5c3a6;
+}
+/* nav {
+  height: 300px;
+} */
+
+/*************** List Area ***************/
+
+section {
+  background-color: #e5c3a6;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.list {
+  margin-top: 15px;
+  list-style: none;
+  width: 500px;
+}
+
+.list :first-child:not(img, p) {
+  margin: 0px;
+}
+
+.list :last-child:not(img, p) {
+  margin: 0px;
+}
+
+.item {
+  background-color: #7c81ad;
+  margin: 15px 0px;
+  overflow: auto;
+  border-radius: 5%;
+  border: solid 5px white;
+}
+
+.item-img {
+  display: block;
+  width: 350px;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+.item-header {
+  margin: 5px;
+}
+
+.item-desc {
+  margin: 8px 0;
+  padding: 5px;
+}
+
+/*************** Responsive ***************/
+
+@media (max-width: 768px) {
+  .list {
+    width: 60vw;
+  }
+  .item-img {
+    width: 65%;
+  }
+
+  header {
+    flex-direction: column;
+    height: min-content;
+  }
+  header h1 {
+    margin-left: 0px;
+    font-size: 40px;
+    margin: 10px 0;
+  }
+
+  header ul {
+    list-style: none;
+    display: flex;
+    margin: 0 0 13px 0;
+  }
+
+  header a {
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 35px;
+    margin: 8px 0;
+  }
+
+  header ul {
+    display: flex;
+    margin: 0 0 11px 0;
+  }
+
+  header li {
+    margin: 0 5px;
+  }
+
+  header a {
+    padding: 3px;
+    border-radius: 3px;
+  }
+
+  .list {
+    width: 80vw;
+  }
+  .item-img {
+    width: 80%;
+  }
+}
